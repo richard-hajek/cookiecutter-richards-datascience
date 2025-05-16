@@ -1,5 +1,19 @@
 # Richard's Cookiecutter Data Science project
 
+
+## Quickstart
+
+# TODO check these commands lol
+```
+pipx install cookiecutter # OR
+uvx install cookiecutter # OR
+# Just have installed cookiecutter
+
+cookiecutter https://github.com/richard-hajek/cookiecutter-richards-datascience 
+```
+
+## Notes
+
 This template is aimed at data science projects, ie minimal support for tests, minimal support for typing, highest support for conda, uv, pypi, semi-complex data pipelines.
 
 This project (by itself) does not support
