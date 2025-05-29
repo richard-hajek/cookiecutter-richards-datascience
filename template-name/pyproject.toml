@@ -6,7 +6,7 @@ readme = "README.md"
 authors = [
     { name = "Richard Hajek", email = "richard.m.hajek@gmail.com" }
 ]
-requires-python = ">=3.11"
+requires-python = ">={{cookiecutter.python_ver}}"
 dependencies = []
 
 [build-system]

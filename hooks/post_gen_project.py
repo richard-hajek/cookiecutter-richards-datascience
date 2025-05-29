@@ -26,7 +26,7 @@ def move_dir(src: str, target: str) -> None:
 def git_init():
     subprocess.run(["git", "init"], cwd=PROJECT_DIRECTORY, check=True)
 
-    if "{{cookiecutter.include_richards_toolbox}}" == "y":
+    if "{{cookiecutter.use_richards_toolbox}}":
         submodule_path = os.path.join("src", "lib", "richards-toolbox")
         subprocess.run([
             "git", "submodule", "add",
@@ -36,11 +36,7 @@ def git_init():
 
 
 if __name__ == "__main__":
-    if "{{cookiecutter.include_github_actions}}" != "y":
-        remove_dir(".github")
-    else:
-        if "{{cookiecutter.mkdocs}}" != "y" and "{{cookiecutter.publish_to_pypi}}" == "n":
-            remove_file(".github/workflows/on-release-main.yml")
-    
     if "{{cookiecutter.use_data_dir}}" != "true":
         remove_dir("_data")
+
+    git_init()

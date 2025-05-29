@@ -1,0 +1,3 @@
+[submodule "lib/richards-toolbox"]
+	path = lib/richards-toolbox
+	url = git@github.com:richard-hajek/richards-toolbox.git
