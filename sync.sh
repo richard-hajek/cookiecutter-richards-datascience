@@ -10,6 +10,9 @@ rename_targets=("{{cookiecutter.project_name_robot}}" "{{cookiecutter.project_sl
 for i in "${!rename_srcs[@]}"; do
   src="${rename_srcs[$i]}"
   tgt="${rename_targets[$i]}"
-  rnr regex --recursive --include-dirs --dry-run "$src" "$tgt" "${target_dir}"
+  rnr regex --recursive --include-dirs --force --no-dump "$src" "$tgt" "${target_dir}"
   grep --recursive --files-with-matches --exclude-dir=".git" "$src" "${target_dir}" | xargs sed --in-place "s/$src/$tgt/g"
 done
+
+
+rm -rf "${target_dir}/src/lib/richards-toolbox"

@@ -3,6 +3,7 @@ from __future__ import annotations
 
 import os
 import shutil
+import subprocess
 
 PROJECT_DIRECTORY = os.path.realpath(os.path.curdir)
 
@@ -21,6 +22,17 @@ def move_file(filepath: str, target: str) -> None:
 
 def move_dir(src: str, target: str) -> None:
     shutil.move(os.path.join(PROJECT_DIRECTORY, src), os.path.join(PROJECT_DIRECTORY, target))
+
+def git_init():
+    subprocess.run(["git", "init"], cwd=PROJECT_DIRECTORY, check=True)
+
+    if "{{cookiecutter.include_richards_toolbox}}" == "y":
+        submodule_path = os.path.join("src", "lib", "richards-toolbox")
+        subprocess.run([
+            "git", "submodule", "add",
+            "git@github.com:richard-hajek/richards-toolbox.git",
+            submodule_path
+        ], cwd=PROJECT_DIRECTORY, check=True)
 
 
 if __name__ == "__main__":
