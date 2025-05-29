@@ -1,9 +1,13 @@
 # Richard's Cookiecutter Data Science project
 
+- ✅ Complex pipeline support
+- ✅ Newest packaging guidelines
+- ✅ Publishing and linting
 
 ## Quickstart
 
-# TODO check these commands lol
+TODO check these commands lol
+
 ```
 pipx install cookiecutter # OR
 uvx install cookiecutter # OR

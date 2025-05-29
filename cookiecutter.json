@@ -1,6 +1,8 @@
 {
   "project_name": "Richard's Datascience Starter",
-  "project_slug": "{{ cookiecutter.project_name.lower().replace(' ', '_').replace(\"'\", '') }}",
+  "project_name_robot": "{{ cookiecutter.project_name.lower().replace(' ', '-').replace(\"'\", '') }}",
+  "project_slug": "{{ cookiecutter.project_name_robot.replace('-', '_') }}",
+  "python_ver": "3.10",
   "author": "richard-hajek",
   "use_data_dir": true,
   "use_artifacts_dir": true,
