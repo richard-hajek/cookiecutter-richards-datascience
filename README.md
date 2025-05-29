@@ -1,8 +1,10 @@
 # Richard's Cookiecutter Data Science project
 
-- ✅ Complex pipeline support
+This project's goals are:
+
 - ✅ Newest packaging guidelines
-- ✅ Publishing and linting
+- ✅ Publishing PyPI package
+- ✅ Linting
 
 ## Quickstart
 
@@ -18,7 +20,7 @@ cookiecutter https://github.com/richard-hajek/cookiecutter-richards-datascience
 
 ## Notes
 
-This template is aimed at data science projects, ie minimal support for tests, minimal support for typing, highest support for conda, uv, pypi, semi-complex data pipelines.
+This template is aimed at data science projects, ie minimal support for tests, minimal support for typing, highest support for uv, pypi, semi-complex data pipelines.
 
 This project (by itself) does not support
 - dev contains
