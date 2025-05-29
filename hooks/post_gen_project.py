@@ -30,7 +30,7 @@ def git_init():
         submodule_path = os.path.join("src", "lib", "richards-toolbox")
         subprocess.run([
             "git", "submodule", "add",
-            "git@github.com:richard-hajek/richards-toolbox.git",
+            "https://github.com/richard-hajek/richards-toolbox.git",
             submodule_path
         ], cwd=PROJECT_DIRECTORY, check=True)
 
